@@ -34,9 +34,9 @@ data compile_stanc_tabs_&geosuf;
 		ACS.acs_&_years._dc_sum_tr_&geosuf
 			(keep= &geo
 			    totpop_&_years.
-                pop35_64years pop18_34years pop65andoveryears popunder18years popunder5years
+                /*pop35_64years pop18_34years pop65andoveryears popunder18years popunder5years
                 agghshldincome poppoorpersons personspovertydefined mpopworkfth 
-				popworkftlt75k popworkftlt35k 
+				popworkftlt75k popworkftlt35k */
 				popincivlaborforce_&_years.
 				pop16andoveryears_&_years. popcivilianemployed_&_years. popunemployed_&_years. 
 				poppoorpersons_&_years. personspovertydefined_&_years. popwithrace_&_years. 
@@ -56,11 +56,11 @@ data compile_stanc_tabs_&geosuf;
 				NumOwnCstBurden_50_74K_&_years. NumOwnCstBurden_75_99K_&_years. 
 				NumOwnCstBurden_100_149_&_years. NumOwnCstBurden_GT150K_&_years. 
 
-				hshldincunder15000_&_years. hshldinc15000to34999_&_years.
+				/*hshldincunder15000_&_years. hshldinc15000to34999_&_years.
 				hshldinc35000to49999_&_years. hshldinc50000to74999_&_years.
                 hshldinc75000to99999_&_years. hshldinc100000to124999_&_years.
 				hshldinc125000to149999_&_years. hshldinc150000to199999_&_years.
-                hshldinc200000plus_&_years.
+                hshldinc200000plus_&_years.*/
                 
                 PopUnder18YearsM_&_years. PopUnder18YearsF_&_years. Pop18_34YearsM_&_years. Pop18_34YearsF_&_years. Pop35_64YearsM_&_years.
 	            Pop35_64YearsF_&_years. Pop65andOverYearsM_&_years. Pop65andOverYearsF_&_years.
@@ -165,7 +165,7 @@ data compile_stanc_tabs_&geosuf;
 				fs_case_2012 fs_case_2013 fs_case_2014 fs_case_2015 fs_case_2016)
 
           
-			Vital.Births_sum_&geosuf
+			/*Vital.Births_sum_&geosuf
             (keep=&geo
                births_total_2000 births_total_2001 births_total_2002 births_total_2003 births_total_2004
 			   births_total_2005 births_total_2006 births_total_2007 births_total_2008 births_total_2009
@@ -268,17 +268,21 @@ data compile_stanc_tabs_&geosuf;
                deaths_suicide_2006 deaths_suicide_2007 deaths_suicide_2008 deaths_suicide_2009 deaths_suicide_2010
 			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
                deaths_suicide_2016
-			   )
+			   )*/
+;
+by &geo.;
+run;
 
-
+data calc_stanc_tabs_&geosuf;
+	set compile_stanc_tabs_&geosuf;
         /*Population by Age and Sex*/
-               PopUnder18Years_&_years.= PopUnder18YearsM_&_years. + PopUnder18YearsF_&_years.
-               Pop18_34Years_&_years.= Pop18_34YearsM_&_years.+ Pop18_34YearsF_&_years.
-               Pop35_64Years_&_years.= Pop35_64YearsM_&_years. + Pop35_64YearsF_&_years.
-               Pop65andOverYears_&_years. = Pop65andOverYearsM_&_years. + Pop65andOverYearsF_&_years.
+               PopUnder18Years_&_years. = PopUnder18YearsM_&_years. + PopUnder18YearsF_&_years.;
+               Pop18_34Years_&_years. = Pop18_34YearsM_&_years.+ Pop18_34YearsF_&_years.;
+               Pop35_64Years_&_years. = Pop35_64YearsM_&_years. + Pop35_64YearsF_&_years.;
+               Pop65andOverYears_&_years. = Pop65andOverYearsM_&_years. + Pop65andOverYearsF_&_years.;
 
-			   PopFemale_&_years. = PopUnder18YearsF_&_years.+ Pop18_34YearsF_&_years. + Pop18_34YearsF_&_years. + Pop65andOverYearsF_&_years.
-               PopMale_&_years. = PopUnder18YearsM_&_years.+ Pop18_34YearsM_&_years. + Pop18_34YearsM_&_years. + Pop65andOverYearsM_&_years.
+			   PopFemale_&_years. = PopUnder18YearsF_&_years.+ Pop18_34YearsF_&_years. + Pop18_34YearsF_&_years. + Pop65andOverYearsF_&_years.;
+               PopMale_&_years. = PopUnder18YearsM_&_years.+ Pop18_34YearsM_&_years. + Pop18_34YearsM_&_years. + Pop65andOverYearsM_&_years.;
 
 		/*Labor force, employment, and poverty*/
 			PctLaborForce_&_years. = popincivlaborforce_&_years. / pop16andoveryears_&_years.;
@@ -378,9 +382,9 @@ data compile_stanc_tabs_&geosuf;
 			violent_crime_rate_2016 = crimes_pt1_violent_2016 / crime_rate_pop_2016;
             violent_crime_rate_2017 = crimes_pt1_violent_2017 / crime_rate_pop_2017;
 
-	run;
+run;
 
-proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanton Commons Tabulations, &geo");
+proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanton Commons Tabulations, &geo");
 	var 	&geo 	
 
 		/*ACS Population 2012-2016*/
@@ -443,12 +447,12 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
 			GrossRentGT3500_&_years. 
 
 
-		/*ACS Household by Income*/
+		/*ACS Household by Income
 				hshldincunder15000_&_years. hshldinc15000to34999_&_years.
 				hshldinc35000to49999_&_years. hshldinc50000to74999_&_years.
                 hshldinc75000to99999_&_years. hshldinc100000to124999_&_years.
 				hshldinc125000to149999_&_years. hshldinc150000to199999_&_years.
-                hshldinc200000plus_&_years.
+                hshldinc200000plus_&_years.*/
 
 		/*ACS Poverty*/		
 			PctPoorPersons_&_years.
@@ -521,8 +525,7 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
 			violent_crime_rate_2015 violent_crime_rate_2016 
 	        violent_crime_rate_2017 
 
-  /*Vital Births and Deaths*/
-
+  /*Vital Births and Deaths
                births_total_2000 births_total_2001 births_total_2002 births_total_2003 births_total_2004
 			   births_total_2005 births_total_2006 births_total_2007 births_total_2008 births_total_2009
                births_total_2010 births_total_2011 births_total_2012 births_total_2013 births_total_2014
@@ -620,7 +623,8 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
 			   deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
                deaths_suicide_2006 deaths_suicide_2007 deaths_suicide_2008 deaths_suicide_2009 deaths_suicide_2010
 			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
-               deaths_suicide_2016
+               deaths_suicide_2016*/
+
   
       
 
@@ -629,7 +633,7 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
                 tanf_case_1998 tanf_case_1999 tanf_case_2000 tanf_case_2001 tanf_case_2002
 				tanf_case_2003 tanf_case_2004 tanf_case_2005 tanf_case_2006 tanf_case_2007
 				tanf_case_2008 tanf_case_2009 tanf_case_2010 tanf_case_2011 tanf_case_2012
-				tanf_case_2013 tanf_case_2014 tanf_case_2015 tanf_case_2016 )
+				tanf_case_2013 tanf_case_2014 tanf_case_2015 tanf_case_2016 
                 fs_case_2000 fs_case_2001 fs_case_2002 fs_case_2003 fs_case_2004 fs_case_2005 
 				fs_case_2006 fs_case_2007 fs_case_2008 fs_case_2009 fs_case_2010 fs_case_2011
 				fs_case_2012 fs_case_2013 fs_case_2014 fs_case_2015 fs_case_2016
@@ -637,8 +641,8 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
         /*HUD HCV counts*/
              total_units
 
-        /*BRFS family emotional well being*/
-			 MHLTH_CrudePrev
+        /*BRFS family emotional well being
+			 MHLTH_CrudePrev*/
 
 		;
 
