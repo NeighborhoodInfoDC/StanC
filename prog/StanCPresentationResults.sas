@@ -34,9 +34,11 @@ data compile_stanc_tabs_&geosuf;
 		ACS.acs_&_years._dc_sum_tr_&geosuf
 			(keep= &geo
 			    totpop_&_years.
-                /*pop35_64years pop18_34years pop65andoveryears popunder18years popunder5years
+                pop35_64yearsM pop35_64yearsF pop18_34yearsF pop18_34yearsM 
+				pop65andoveryearsF pop65andoveryearsM popunder18yearsF popunder18yearsM 
+				popunder5yearsM popunder5yearsF
                 agghshldincome poppoorpersons personspovertydefined mpopworkfth 
-				popworkftlt75k popworkftlt35k */
+				popworkftlt75k popworkftlt35k 
 				popincivlaborforce_&_years.
 				pop16andoveryears_&_years. popcivilianemployed_&_years. popunemployed_&_years. 
 				poppoorpersons_&_years. personspovertydefined_&_years. popwithrace_&_years. 
@@ -56,11 +58,11 @@ data compile_stanc_tabs_&geosuf;
 				NumOwnCstBurden_50_74K_&_years. NumOwnCstBurden_75_99K_&_years. 
 				NumOwnCstBurden_100_149_&_years. NumOwnCstBurden_GT150K_&_years. 
 
-				/*hshldincunder15000_&_years. hshldinc15000to34999_&_years.
+				hshldincunder15000_&_years. hshldinc15000to34999_&_years.
 				hshldinc35000to49999_&_years. hshldinc50000to74999_&_years.
                 hshldinc75000to99999_&_years. hshldinc100000to124999_&_years.
 				hshldinc125000to149999_&_years. hshldinc150000to199999_&_years.
-                hshldinc200000plus_&_years.*/
+                hshldinc200000plus_&_years.
                 
                 PopUnder18YearsM_&_years. PopUnder18YearsF_&_years. Pop18_34YearsM_&_years. Pop18_34YearsF_&_years. Pop35_64YearsM_&_years.
 	            Pop35_64YearsF_&_years. Pop65andOverYearsM_&_years. Pop65andOverYearsF_&_years.
@@ -73,7 +75,6 @@ data compile_stanc_tabs_&geosuf;
 
                 FamMarriedCouple_&_years. FamMaleholder_&_years. FamFemaleholder_&_years. Nonfamlivingalone_&_years.
                 Nonfamnotlivingalone_&_years.
-
 				)
 
 		Acs.Acs_&_years._dc_sum_bg_&geosuf
@@ -167,107 +168,112 @@ data compile_stanc_tabs_&geosuf;
           
 			Vital.Births_sum_&geosuf
             (keep=&geo
-               births_total_2000 births_total_2001 births_total_2002 births_total_2003 births_total_2004
+               /*births_total_2000 births_total_2001 births_total_2002 */births_total_2003 births_total_2004
 			   births_total_2005 births_total_2006 births_total_2007 births_total_2008 births_total_2009
-               births_total_2010 births_total_2011 /*births_total_2012 births_total_2013 births_total_2014
-			   births_total_2015 births_total_2016*/
-               births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002 births_prenat_adeq_2003 births_prenat_adeq_2004
+               births_total_2010 births_total_2011 births_total_2012 births_total_2013 births_total_2014
+			   births_total_2015 births_total_2016
+
+               /*births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002*/ births_prenat_adeq_2003 births_prenat_adeq_2004
 			   births_prenat_adeq_2005 births_prenat_adeq_2006 births_prenat_adeq_2007 births_prenat_adeq_2008 births_prenat_adeq_2009
-               births_prenat_adeq_2010 births_prenat_adeq_2011 /*births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
-			   births_prenat_adeq_2015 births_prenat_adeq_2016*/
+               births_prenat_adeq_2010 births_prenat_adeq_2011 births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
+			   births_prenat_adeq_2015 births_prenat_adeq_2016
 
-               births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002 births_prenat_1st_2003 births_prenat_1st_2004
+               /*births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002*/ births_prenat_1st_2003 births_prenat_1st_2004
 			   births_prenat_1st_2005 births_prenat_1st_2006 births_prenat_1st_2007 births_prenat_1st_2008 births_prenat_1st_2009
-               births_prenat_1st_2010 births_prenat_1st_2011 /*births_prenat_1st_2012 births_prenat_1st_2013 births_prenat_1st_2014
-			   births_prenat_1st_2015 births_prenat_1st_2016*/
+               births_prenat_1st_2010 births_prenat_1st_2011 births_prenat_1st_2012 births_prenat_1st_2013 births_prenat_1st_2014
+			   births_prenat_1st_2015 births_prenat_1st_2016
 
-			   births_low_wt_2000 births_low_wt_2001 births_low_wt_2002 births_low_wt_2003 births_low_wt_2004
+			   /*births_low_wt_2000 births_low_wt_2001 births_low_wt_2002*/ births_low_wt_2003 births_low_wt_2004
 			   births_low_wt_2005 births_low_wt_2006 births_low_wt_2007 births_low_wt_2008 births_low_wt_2009
-               births_low_wt_2010 births_low_wt_2011 /*births_low_wt_2012 births_low_wt_2013 births_low_wt_2014
-			   births_low_wt_2015 births_low_wt_2016*/
+               births_low_wt_2010 births_low_wt_2011 births_low_wt_2012 births_low_wt_2013 births_low_wt_2014
+			   births_low_wt_2015 births_low_wt_2016
 
-			   births_preterm_2000 births_preterm_2001 births_preterm_2002 births_preterm_2003 births_preterm_2004
+			   /*births_preterm_2000 births_preterm_2001 births_preterm_2002*/ births_preterm_2003 births_preterm_2004
 			   births_preterm_2005 births_preterm_2006 births_preterm_2007 births_preterm_2008 births_preterm_2009
-               births_preterm_2010 births_preterm_2011 /*births_preterm_2012 births_preterm_2013 births_preterm_2014
-			   births_preterm_2015 births_preterm_2016*/
+               births_preterm_2010 births_preterm_2011 births_preterm_2012 births_preterm_2013 births_preterm_2014
+			   births_preterm_2015 births_preterm_2016
 			   )
+
+             CDC500.CDC500_2017_sum_&geosuf
+			 (keep=&geo
+              MHLTH_CrudePrev)
 
              Vital.Deaths_sum_&geosuf
             (keep=&geo
-               deaths_total_2000 deaths_total_2001 deaths_total_2002 deaths_total_2003 deaths_total_2004
-			   deaths_total_2005 deaths_total_2006 deaths_total_2007 /*deaths_total_2008 deaths_total_2009
+               /*deaths_total_2000 deaths_total_2001 deaths_total_2002 deaths_total_2003 deaths_total_2004
+			   deaths_total_2005 deaths_total_2006 deaths_total_2007 deaths_total_2008*/ deaths_total_2009
                deaths_total_2010 deaths_total_2011 deaths_total_2012 deaths_total_2013 deaths_total_2014
-			   deaths_total_2015 deaths_total_2016*/
+			   deaths_total_2015 deaths_total_2016
 
-               deaths_15to19_2000 deaths_15to19_2001 deaths_15to19_2002 deaths_15to19_2003 deaths_15to19_2004 deaths_15to19_2005 
-               deaths_15to19_2006 deaths_15to19_2007 /*deaths_15to19_2008 deaths_15to19_2009 deaths_15to19_2010
+               /*deaths_15to19_2000 deaths_15to19_2001 deaths_15to19_2002 deaths_15to19_2003 deaths_15to19_2004 deaths_15to19_2005 
+               deaths_15to19_2006 deaths_15to19_2007 deaths_15to19_2008*/ deaths_15to19_2009 deaths_15to19_2010
 			   deaths_15to19_2011 deaths_15to19_2012 deaths_15to19_2013 deaths_15to19_2014 deaths_15to19_2015
-               deaths_15to19_2016*/
+               deaths_15to19_2016
 
-               deaths_20to24_2000 deaths_20to24_2001 deaths_20to24_2002 deaths_20to24_2003 deaths_20to24_2004 deaths_20to24_2005 
-               deaths_20to24_2006 deaths_20to24_2007 /*deaths_20to24_2008 deaths_20to24_2009 deaths_20to24_2010
+               /*deaths_20to24_2000 deaths_20to24_2001 deaths_20to24_2002 deaths_20to24_2003 deaths_20to24_2004 deaths_20to24_2005 
+               deaths_20to24_2006 deaths_20to24_2007 deaths_20to24_2008*/ deaths_20to24_2009 deaths_20to24_2010
 			   deaths_20to24_2011 deaths_20to24_2012 deaths_20to24_2013 deaths_20to24_2014 deaths_20to24_2015
-               deaths_20to24_2016*/
+               deaths_20to24_2016
 
-               deaths_adult_2000 deaths_adult_2001 deaths_adult_2002 deaths_adult_2003 deaths_adult_2004 deaths_adult_2005 
-               deaths_adult_2006 deaths_adult_2007 /*deaths_adult_2008 deaths_adult_2009 deaths_adult_2010
+               /*deaths_adult_2000 deaths_adult_2001 deaths_adult_2002 deaths_adult_2003 deaths_adult_2004 deaths_adult_2005 
+               deaths_adult_2006 deaths_adult_2007 deaths_adult_2008*/ deaths_adult_2009 deaths_adult_2010
 			   deaths_adult_2011 deaths_adult_2012 deaths_adult_2013 deaths_adult_2014 deaths_adult_2015
-               deaths_adult_2016*/
+               deaths_adult_2016
 
-			   deaths_accident_2000 deaths_accident_2001 deaths_accident_2002 deaths_accident_2003 deaths_accident_2004 deaths_accident_2005 
-               deaths_accident_2006 deaths_accident_2007 /*deaths_accident_2008 deaths_accident_2009 deaths_accident_2010
+			   /*deaths_accident_2000 deaths_accident_2001 deaths_accident_2002 deaths_accident_2003 deaths_accident_2004 deaths_accident_2005 
+               deaths_accident_2006 deaths_accident_2007 deaths_accident_2008*/ deaths_accident_2009 deaths_accident_2010
 			   deaths_accident_2011 deaths_accident_2012 deaths_accident_2013 deaths_accident_2014 deaths_accident_2015
-               deaths_accident_2016*/
+               deaths_accident_2016
 
-               deaths_cancer_2000 deaths_cancer_2001 deaths_cancer_2002 deaths_cancer_2003 deaths_cancer_2004 deaths_cancer_2005 
-               deaths_cancer_2006 deaths_cancer_2007 /*deaths_cancer_2008 deaths_cancer_2009 deaths_cancer_2010
+               /*deaths_cancer_2000 deaths_cancer_2001 deaths_cancer_2002 deaths_cancer_2003 deaths_cancer_2004 deaths_cancer_2005 
+               deaths_cancer_2006 deaths_cancer_2007 deaths_cancer_2008*/ deaths_cancer_2009 deaths_cancer_2010
 			   deaths_cancer_2011 deaths_cancer_2012 deaths_cancer_2013 deaths_cancer_2014 deaths_cancer_2015
-               deaths_cancer_2016*/
+               deaths_cancer_2016
 
-               deaths_cereb_2000 deaths_cereb_2001 deaths_cereb_2002 deaths_cereb_2003 deaths_cereb_2004 deaths_cereb_2005 
-               deaths_cereb_2006 deaths_cereb_2007 /*deaths_cereb_2008 deaths_cereb_2009 deaths_cereb_2010
+               /*deaths_cereb_2000 deaths_cereb_2001 deaths_cereb_2002 deaths_cereb_2003 deaths_cereb_2004 deaths_cereb_2005 
+               deaths_cereb_2006 deaths_cereb_2007 deaths_cereb_2008*/ deaths_cereb_2009 deaths_cereb_2010
 			   deaths_cereb_2011 deaths_cereb_2012 deaths_cereb_2013 deaths_cereb_2014 deaths_cereb_2015
-               deaths_cereb_2016*/
+               deaths_cereb_2016
 
-			   deaths_diabetes_2000 deaths_diabetes_2001 deaths_diabetes_2002 deaths_diabetes_2003 deaths_diabetes_2004 deaths_diabetes_2005 
-               deaths_diabetes_2006 deaths_diabetes_2007 /*deaths_diabetes_2008 deaths_diabetes_2009 deaths_diabetes_2010
+			   /*deaths_diabetes_2000 deaths_diabetes_2001 deaths_diabetes_2002 deaths_diabetes_2003 deaths_diabetes_2004 deaths_diabetes_2005 
+               deaths_diabetes_2006 deaths_diabetes_2007 deaths_diabetes_2008*/ deaths_diabetes_2009 deaths_diabetes_2010
 			   deaths_diabetes_2011 deaths_diabetes_2012 deaths_diabetes_2013 deaths_diabetes_2014 deaths_diabetes_2015
-               deaths_diabetes_2016*/
+               deaths_diabetes_2016
 
-               deaths_heart_2000 deaths_heart_2001 deaths_heart_2002 deaths_heart_2003 deaths_heart_2004 deaths_heart_2005 
-               deaths_heart_2006 deaths_heart_2007 /*deaths_heart_2008 deaths_heart_2009 deaths_heart_2010
+               /*deaths_heart_2000 deaths_heart_2001 deaths_heart_2002 deaths_heart_2003 deaths_heart_2004 deaths_heart_2005 
+               deaths_heart_2006 deaths_heart_2007 deaths_heart_2008*/ deaths_heart_2009 deaths_heart_2010
 			   deaths_heart_2011 deaths_heart_2012 deaths_heart_2013 deaths_heart_2014 deaths_heart_2015
-               deaths_heart_2016*/
+               deaths_heart_2016
 
-               deaths_hiv_2000 deaths_hiv_2001 deaths_hiv_2002 deaths_hiv_2003 deaths_hiv_2004 deaths_hiv_2005 
-               deaths_hiv_2006 deaths_hiv_2007 /*deaths_hiv_2008 deaths_hiv_2009 deaths_hiv_2010
+               /*deaths_hiv_2000 deaths_hiv_2001 deaths_hiv_2002 deaths_hiv_2003 deaths_hiv_2004 deaths_hiv_2005 
+               deaths_hiv_2006 deaths_hiv_2007 deaths_hiv_2008*/ deaths_hiv_2009 deaths_hiv_2010
 			   deaths_hiv_2011 deaths_hiv_2012 deaths_hiv_2013 deaths_hiv_2014 deaths_hiv_2015
-               deaths_hiv_2016*/
+               deaths_hiv_2016
 
-			   deaths_homicide_2000 deaths_homicide_2001 deaths_homicide_2002 deaths_homicide_2003 deaths_homicide_2004 deaths_homicide_2005 
-               deaths_homicide_2006 deaths_homicide_2007 /*deaths_homicide_2008 deaths_homicide_2009 deaths_homicide_2010
+			   /*deaths_homicide_2000 deaths_homicide_2001 deaths_homicide_2002 deaths_homicide_2003 deaths_homicide_2004 deaths_homicide_2005 
+               deaths_homicide_2006 deaths_homicide_2007 deaths_homicide_2008*/ deaths_homicide_2009 deaths_homicide_2010
 			   deaths_homicide_2011 deaths_homicide_2012 deaths_homicide_2013 deaths_homicide_2014 deaths_homicide_2015
-               deaths_homicide_2016*/
+               deaths_homicide_2016
 
-			   deaths_hypert_2000 deaths_hypert_2001 deaths_hypert_2002 deaths_hypert_2003 deaths_hypert_2004 deaths_hypert_2005 
-               deaths_hypert_2006 deaths_hypert_2007 /*deaths_hypert_2008 deaths_hypert_2009 deaths_hypert_2010
+			   /*deaths_hypert_2000 deaths_hypert_2001 deaths_hypert_2002 deaths_hypert_2003 deaths_hypert_2004 deaths_hypert_2005 
+               deaths_hypert_2006 deaths_hypert_2007 deaths_hypert_2008*/ deaths_hypert_2009 deaths_hypert_2010
 			   deaths_hypert_2011 deaths_hypert_2012 deaths_hypert_2013 deaths_hypert_2014 deaths_hypert_2015
-               deaths_hypert_2016*/
+               deaths_hypert_2016
 
-               deaths_liver_2000 deaths_liver_2001 deaths_liver_2002 deaths_liver_2003 deaths_liver_2004 deaths_liver_2005 
-               deaths_liver_2006 deaths_liver_2007 /*deaths_liver_2008 deaths_liver_2009 deaths_liver_2010
+               /*deaths_liver_2000 deaths_liver_2001 deaths_liver_2002 deaths_liver_2003 deaths_liver_2004 deaths_liver_2005 
+               deaths_liver_2006 deaths_liver_2007 deaths_liver_2008*/ deaths_liver_2009 deaths_liver_2010
 			   deaths_liver_2011 deaths_liver_2012 deaths_liver_2013 deaths_liver_2014 deaths_liver_2015
-               deaths_liver_2016*/
+               deaths_liver_2016
 
-               deaths_oth_caus_2000 deaths_oth_caus_2001 deaths_oth_caus_2002 deaths_oth_caus_2003 deaths_oth_caus_2004 deaths_oth_caus_2005 
-               deaths_oth_caus_2006 deaths_oth_caus_2007 /*deaths_oth_caus_2008 deaths_oth_caus_2009 deaths_oth_caus_2010
+               /*deaths_oth_caus_2000 deaths_oth_caus_2001 deaths_oth_caus_2002 deaths_oth_caus_2003 deaths_oth_caus_2004 deaths_oth_caus_2005 
+               deaths_oth_caus_2006 deaths_oth_caus_2007 deaths_oth_caus_2008*/ deaths_oth_caus_2009 deaths_oth_caus_2010
 			   deaths_oth_caus_2011 deaths_oth_caus_2012 deaths_oth_caus_2013 deaths_oth_caus_2014 deaths_oth_caus_2015
-               deaths_oth_caus_2016*/
+               deaths_oth_caus_2016
 
-			   deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
-               deaths_suicide_2006 deaths_suicide_2007 /*deaths_suicide_2008 deaths_suicide_2009 deaths_suicide_2010
+			   /*deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
+               deaths_suicide_2006 deaths_suicide_2007 deaths_suicide_2008*/ deaths_suicide_2009 deaths_suicide_2010
 			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
-               deaths_suicide_2016*/
+               deaths_suicide_2016
 			   )
 ;
 by &geo.;
@@ -406,13 +412,6 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 			NumRenterOccupiedHU_&_years. 
 			PctHomeownership_&_years. 
 
-			GrossRentLT100_&_years. GrossRent100_149_&_years. 
-			GrossRent800_899_&_years. GrossRent900_999_&_years.
-			GrossRent1000_1249_&_years. GrossRent1250_1499_&_years.
-			GrossRent1500_1999_&_years. GrossRent2000_2499_&_years.
-			GrossRent2500_2999_&_years. GrossRent3000_3499_&_years.
-			GrossRentGT3500_&_years. 
-
 			NumRenterCostBurden_&_years. 
 			NumRentSevereCostBurden_&_years. 
 			PctRenterCostBurden_&_years. 
@@ -447,12 +446,12 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 			GrossRentGT3500_&_years. 
 
 
-		/*ACS Household by Income
+		ACS Household by Income
 				hshldincunder15000_&_years. hshldinc15000to34999_&_years.
 				hshldinc35000to49999_&_years. hshldinc50000to74999_&_years.
                 hshldinc75000to99999_&_years. hshldinc100000to124999_&_years.
 				hshldinc125000to149999_&_years. hshldinc150000to199999_&_years.
-                hshldinc200000plus_&_years.*/
+                hshldinc200000plus_&_years.
 
 		/*ACS Poverty*/		
 			PctPoorPersons_&_years.
@@ -526,105 +525,30 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 	        violent_crime_rate_2017 
 
   /*Vital Births and Deaths*/
-              births_total_2000 births_total_2001 births_total_2002 births_total_2003 births_total_2004
+               /*births_total_2000 births_total_2001 births_total_2002*/ births_total_2003 births_total_2004
 			   births_total_2005 births_total_2006 births_total_2007 births_total_2008 births_total_2009
-               births_total_2010 births_total_2011 /*births_total_2012 births_total_2013 births_total_2014
-			   births_total_2015 births_total_2016*/
-               births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002 births_prenat_adeq_2003 births_prenat_adeq_2004
+               births_total_2010 births_total_2011 births_total_2012 births_total_2013 births_total_2014
+			   births_total_2015 births_total_2016
+
+               /*births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002*/ births_prenat_adeq_2003 births_prenat_adeq_2004
 			   births_prenat_adeq_2005 births_prenat_adeq_2006 births_prenat_adeq_2007 births_prenat_adeq_2008 births_prenat_adeq_2009
-               births_prenat_adeq_2010 births_prenat_adeq_2011 /*births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
-			   births_prenat_adeq_2015 births_prenat_adeq_2016*/
+               births_prenat_adeq_2010 births_prenat_adeq_2011 births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
+			   births_prenat_adeq_2015 births_prenat_adeq_2016
 
-               births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002 births_prenat_1st_2003 births_prenat_1st_2004
+               /*births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002 */ births_prenat_1st_2003 births_prenat_1st_2004
 			   births_prenat_1st_2005 births_prenat_1st_2006 births_prenat_1st_2007 births_prenat_1st_2008 births_prenat_1st_2009
-               births_prenat_1st_2010 births_prenat_1st_2011 /*births_prenat_1st_2012 births_prenat_1st_2013 births_prenat_1st_2014
-			   births_prenat_1st_2015 births_prenat_1st_2016*/
+               births_prenat_1st_2010 births_prenat_1st_2011 births_prenat_1st_2012 births_prenat_1st_2013 births_prenat_1st_2014
+			   births_prenat_1st_2015 births_prenat_1st_2016
 
-			   births_low_wt_2000 births_low_wt_2001 births_low_wt_2002 births_low_wt_2003 births_low_wt_2004
+			   /*births_low_wt_2000 births_low_wt_2001 births_low_wt_2002*/ births_low_wt_2003 births_low_wt_2004
 			   births_low_wt_2005 births_low_wt_2006 births_low_wt_2007 births_low_wt_2008 births_low_wt_2009
-               births_low_wt_2010 births_low_wt_2011 /*births_low_wt_2012 births_low_wt_2013 births_low_wt_2014
-			   births_low_wt_2015 births_low_wt_2016*/
+               births_low_wt_2010 births_low_wt_2011 births_low_wt_2012 births_low_wt_2013 births_low_wt_2014
+			   births_low_wt_2015 births_low_wt_2016
 
-			   births_preterm_2000 births_preterm_2001 births_preterm_2002 births_preterm_2003 births_preterm_2004
+			   /*births_preterm_2000 births_preterm_2001 births_preterm_2002*/ births_preterm_2003 births_preterm_2004
 			   births_preterm_2005 births_preterm_2006 births_preterm_2007 births_preterm_2008 births_preterm_2009
-               births_preterm_2010 births_preterm_2011 /*births_preterm_2012 births_preterm_2013 births_preterm_2014
-			   births_preterm_2015 births_preterm_2016*/
-
-                 deaths_total_2000 deaths_total_2001 deaths_total_2002 deaths_total_2003 deaths_total_2004
-			   deaths_total_2005 deaths_total_2006 deaths_total_2007 /*deaths_total_2008 deaths_total_2009
-               deaths_total_2010 deaths_total_2011 deaths_total_2012 deaths_total_2013 deaths_total_2014
-			   deaths_total_2015 deaths_total_2016*/
-
-               deaths_15to19_2000 deaths_15to19_2001 deaths_15to19_2002 deaths_15to19_2003 deaths_15to19_2004 deaths_15to19_2005 
-               deaths_15to19_2006 deaths_15to19_2007 /*deaths_15to19_2008 deaths_15to19_2009 deaths_15to19_2010
-			   deaths_15to19_2011 deaths_15to19_2012 deaths_15to19_2013 deaths_15to19_2014 deaths_15to19_2015
-               deaths_15to19_2016*/
-
-               deaths_20to24_2000 deaths_20to24_2001 deaths_20to24_2002 deaths_20to24_2003 deaths_20to24_2004 deaths_20to24_2005 
-               deaths_20to24_2006 deaths_20to24_2007 /*deaths_20to24_2008 deaths_20to24_2009 deaths_20to24_2010
-			   deaths_20to24_2011 deaths_20to24_2012 deaths_20to24_2013 deaths_20to24_2014 deaths_20to24_2015
-               deaths_20to24_2016*/
-
-               deaths_adult_2000 deaths_adult_2001 deaths_adult_2002 deaths_adult_2003 deaths_adult_2004 deaths_adult_2005 
-               deaths_adult_2006 deaths_adult_2007 /*deaths_adult_2008 deaths_adult_2009 deaths_adult_2010
-			   deaths_adult_2011 deaths_adult_2012 deaths_adult_2013 deaths_adult_2014 deaths_adult_2015
-               deaths_adult_2016*/
-
-			   deaths_accident_2000 deaths_accident_2001 deaths_accident_2002 deaths_accident_2003 deaths_accident_2004 deaths_accident_2005 
-               deaths_accident_2006 deaths_accident_2007 /*deaths_accident_2008 deaths_accident_2009 deaths_accident_2010
-			   deaths_accident_2011 deaths_accident_2012 deaths_accident_2013 deaths_accident_2014 deaths_accident_2015
-               deaths_accident_2016*/
-
-               deaths_cancer_2000 deaths_cancer_2001 deaths_cancer_2002 deaths_cancer_2003 deaths_cancer_2004 deaths_cancer_2005 
-               deaths_cancer_2006 deaths_cancer_2007 /*deaths_cancer_2008 deaths_cancer_2009 deaths_cancer_2010
-			   deaths_cancer_2011 deaths_cancer_2012 deaths_cancer_2013 deaths_cancer_2014 deaths_cancer_2015
-               deaths_cancer_2016*/
-
-               deaths_cereb_2000 deaths_cereb_2001 deaths_cereb_2002 deaths_cereb_2003 deaths_cereb_2004 deaths_cereb_2005 
-               deaths_cereb_2006 deaths_cereb_2007 /*deaths_cereb_2008 deaths_cereb_2009 deaths_cereb_2010
-			   deaths_cereb_2011 deaths_cereb_2012 deaths_cereb_2013 deaths_cereb_2014 deaths_cereb_2015
-               deaths_cereb_2016*/
-
-			   deaths_diabetes_2000 deaths_diabetes_2001 deaths_diabetes_2002 deaths_diabetes_2003 deaths_diabetes_2004 deaths_diabetes_2005 
-               deaths_diabetes_2006 deaths_diabetes_2007 /*deaths_diabetes_2008 deaths_diabetes_2009 deaths_diabetes_2010
-			   deaths_diabetes_2011 deaths_diabetes_2012 deaths_diabetes_2013 deaths_diabetes_2014 deaths_diabetes_2015
-               deaths_diabetes_2016*/
-
-               deaths_heart_2000 deaths_heart_2001 deaths_heart_2002 deaths_heart_2003 deaths_heart_2004 deaths_heart_2005 
-               deaths_heart_2006 deaths_heart_2007 /*deaths_heart_2008 deaths_heart_2009 deaths_heart_2010
-			   deaths_heart_2011 deaths_heart_2012 deaths_heart_2013 deaths_heart_2014 deaths_heart_2015
-               deaths_heart_2016*/
-
-               deaths_hiv_2000 deaths_hiv_2001 deaths_hiv_2002 deaths_hiv_2003 deaths_hiv_2004 deaths_hiv_2005 
-               deaths_hiv_2006 deaths_hiv_2007 /*deaths_hiv_2008 deaths_hiv_2009 deaths_hiv_2010
-			   deaths_hiv_2011 deaths_hiv_2012 deaths_hiv_2013 deaths_hiv_2014 deaths_hiv_2015
-               deaths_hiv_2016*/
-
-			   deaths_homicide_2000 deaths_homicide_2001 deaths_homicide_2002 deaths_homicide_2003 deaths_homicide_2004 deaths_homicide_2005 
-               deaths_homicide_2006 deaths_homicide_2007 /*deaths_homicide_2008 deaths_homicide_2009 deaths_homicide_2010
-			   deaths_homicide_2011 deaths_homicide_2012 deaths_homicide_2013 deaths_homicide_2014 deaths_homicide_2015
-               deaths_homicide_2016*/
-
-			   deaths_hypert_2000 deaths_hypert_2001 deaths_hypert_2002 deaths_hypert_2003 deaths_hypert_2004 deaths_hypert_2005 
-               deaths_hypert_2006 deaths_hypert_2007 /*deaths_hypert_2008 deaths_hypert_2009 deaths_hypert_2010
-			   deaths_hypert_2011 deaths_hypert_2012 deaths_hypert_2013 deaths_hypert_2014 deaths_hypert_2015
-               deaths_hypert_2016*/
-
-               deaths_liver_2000 deaths_liver_2001 deaths_liver_2002 deaths_liver_2003 deaths_liver_2004 deaths_liver_2005 
-               deaths_liver_2006 deaths_liver_2007 /*deaths_liver_2008 deaths_liver_2009 deaths_liver_2010
-			   deaths_liver_2011 deaths_liver_2012 deaths_liver_2013 deaths_liver_2014 deaths_liver_2015
-               deaths_liver_2016*/
-
-               deaths_oth_caus_2000 deaths_oth_caus_2001 deaths_oth_caus_2002 deaths_oth_caus_2003 deaths_oth_caus_2004 deaths_oth_caus_2005 
-               deaths_oth_caus_2006 deaths_oth_caus_2007 /*deaths_oth_caus_2008 deaths_oth_caus_2009 deaths_oth_caus_2010
-			   deaths_oth_caus_2011 deaths_oth_caus_2012 deaths_oth_caus_2013 deaths_oth_caus_2014 deaths_oth_caus_2015
-               deaths_oth_caus_2016*/
-
-			   deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
-               deaths_suicide_2006 deaths_suicide_2007 /*deaths_suicide_2008 deaths_suicide_2009 deaths_suicide_2010
-			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
-               deaths_suicide_2016*/
-      
+               births_preterm_2010 births_preterm_2011 births_preterm_2012 births_preterm_2013 births_preterm_2014
+			   births_preterm_2015 births_preterm_2016
 
         /*TANF SNAP caseload*/
 
@@ -637,11 +561,86 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 				fs_case_2012 fs_case_2013 fs_case_2014 fs_case_2015 fs_case_2016
 
         /*HUD HCV counts*/
-             total_units
+               total_units
+ 
+        /*BRFS family emotional well being*/
+			   MHLTH_CrudePrev
+   
+/*wait till death data is ready*/
+               /*deaths_total_2000 deaths_total_2001 deaths_total_2002 deaths_total_2003 deaths_total_2004
+			   deaths_total_2005 deaths_total_2006 deaths_total_2007 deaths_total_2008*/ deaths_total_2009
+               deaths_total_2010 deaths_total_2011 deaths_total_2012 deaths_total_2013 deaths_total_2014
+			   deaths_total_2015 deaths_total_2016
 
-        /*BRFS family emotional well being
-			 MHLTH_CrudePrev*/
+               /*deaths_15to19_2000 deaths_15to19_2001 deaths_15to19_2002 deaths_15to19_2003 deaths_15to19_2004 deaths_15to19_2005 
+               deaths_15to19_2006 deaths_15to19_2007 deaths_15to19_2008*/ deaths_15to19_2009 deaths_15to19_2010
+			   deaths_15to19_2011 deaths_15to19_2012 deaths_15to19_2013 deaths_15to19_2014 deaths_15to19_2015
+               deaths_15to19_2016
 
+               /*deaths_20to24_2000 deaths_20to24_2001 deaths_20to24_2002 deaths_20to24_2003 deaths_20to24_2004 deaths_20to24_2005 
+               deaths_20to24_2006 deaths_20to24_2007 deaths_20to24_2008 */deaths_20to24_2009 deaths_20to24_2010
+			   deaths_20to24_2011 deaths_20to24_2012 deaths_20to24_2013 deaths_20to24_2014 deaths_20to24_2015
+               deaths_20to24_2016
+
+               /*deaths_adult_2000 deaths_adult_2001 deaths_adult_2002 deaths_adult_2003 deaths_adult_2004 deaths_adult_2005 
+               deaths_adult_2006 deaths_adult_2007 /*deaths_adult_2008*/ deaths_adult_2009 deaths_adult_2010
+			   deaths_adult_2011 deaths_adult_2012 deaths_adult_2013 deaths_adult_2014 deaths_adult_2015
+               deaths_adult_2016
+
+			   /*deaths_accident_2000 deaths_accident_2001 deaths_accident_2002 deaths_accident_2003 deaths_accident_2004 deaths_accident_2005 
+               deaths_accident_2006 deaths_accident_2007 deaths_accident_2008*/ deaths_accident_2009 deaths_accident_2010
+			   deaths_accident_2011 deaths_accident_2012 deaths_accident_2013 deaths_accident_2014 deaths_accident_2015
+               deaths_accident_2016
+
+               /*deaths_cancer_2000 deaths_cancer_2001 deaths_cancer_2002 deaths_cancer_2003 deaths_cancer_2004 deaths_cancer_2005 
+               deaths_cancer_2006 deaths_cancer_2007 deaths_cancer_2008*/ deaths_cancer_2009 deaths_cancer_2010
+			   deaths_cancer_2011 deaths_cancer_2012 deaths_cancer_2013 deaths_cancer_2014 deaths_cancer_2015
+               deaths_cancer_2016
+
+               /*deaths_cereb_2000 deaths_cereb_2001 deaths_cereb_2002 deaths_cereb_2003 deaths_cereb_2004 deaths_cereb_2005 
+               deaths_cereb_2006 deaths_cereb_2007 deaths_cereb_2008*/ deaths_cereb_2009 deaths_cereb_2010
+			   deaths_cereb_2011 deaths_cereb_2012 deaths_cereb_2013 deaths_cereb_2014 deaths_cereb_2015
+               deaths_cereb_2016
+
+			   /*deaths_diabetes_2000 deaths_diabetes_2001 deaths_diabetes_2002 deaths_diabetes_2003 deaths_diabetes_2004 deaths_diabetes_2005 
+               deaths_diabetes_2006 deaths_diabetes_2007 deaths_diabetes_2008*/ deaths_diabetes_2009 deaths_diabetes_2010
+			   deaths_diabetes_2011 deaths_diabetes_2012 deaths_diabetes_2013 deaths_diabetes_2014 deaths_diabetes_2015
+               deaths_diabetes_2016
+
+               /*deaths_heart_2000 deaths_heart_2001 deaths_heart_2002 deaths_heart_2003 deaths_heart_2004 deaths_heart_2005 
+               deaths_heart_2006 deaths_heart_2007 deaths_heart_2008*/ deaths_heart_2009 deaths_heart_2010
+			   deaths_heart_2011 deaths_heart_2012 deaths_heart_2013 deaths_heart_2014 deaths_heart_2015
+               deaths_heart_2016
+
+               /*deaths_hiv_2000 deaths_hiv_2001 deaths_hiv_2002 deaths_hiv_2003 deaths_hiv_2004 deaths_hiv_2005 
+               deaths_hiv_2006 deaths_hiv_2007 deaths_hiv_2008*/ deaths_hiv_2009 deaths_hiv_2010
+			   deaths_hiv_2011 deaths_hiv_2012 deaths_hiv_2013 deaths_hiv_2014 deaths_hiv_2015
+               deaths_hiv_2016
+
+			   /*deaths_homicide_2000 deaths_homicide_2001 deaths_homicide_2002 deaths_homicide_2003 deaths_homicide_2004 deaths_homicide_2005 
+               deaths_homicide_2006 deaths_homicide_2007 deaths_homicide_2008*/ deaths_homicide_2009 deaths_homicide_2010
+			   deaths_homicide_2011 deaths_homicide_2012 deaths_homicide_2013 deaths_homicide_2014 deaths_homicide_2015
+               deaths_homicide_2016
+
+			   /*deaths_hypert_2000 deaths_hypert_2001 deaths_hypert_2002 deaths_hypert_2003 deaths_hypert_2004 deaths_hypert_2005 
+               deaths_hypert_2006 deaths_hypert_2007 deaths_hypert_2008*/ deaths_hypert_2009 deaths_hypert_2010
+			   deaths_hypert_2011 deaths_hypert_2012 deaths_hypert_2013 deaths_hypert_2014 deaths_hypert_2015
+               deaths_hypert_2016
+
+               /*deaths_liver_2000 deaths_liver_2001 deaths_liver_2002 deaths_liver_2003 deaths_liver_2004 deaths_liver_2005 
+               deaths_liver_2006 deaths_liver_2007 deaths_liver_2008*/ deaths_liver_2009 deaths_liver_2010
+			   deaths_liver_2011 deaths_liver_2012 deaths_liver_2013 deaths_liver_2014 deaths_liver_2015
+               deaths_liver_2016
+
+               /*deaths_oth_caus_2000 deaths_oth_caus_2001 deaths_oth_caus_2002 deaths_oth_caus_2003 deaths_oth_caus_2004 deaths_oth_caus_2005 
+               deaths_oth_caus_2006 deaths_oth_caus_2007 deaths_oth_caus_2008*/ deaths_oth_caus_2009 deaths_oth_caus_2010
+			   deaths_oth_caus_2011 deaths_oth_caus_2012 deaths_oth_caus_2013 deaths_oth_caus_2014 deaths_oth_caus_2015
+               deaths_oth_caus_2016
+
+			   /*deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
+               deaths_suicide_2006 deaths_suicide_2007 deaths_suicide_2008*/ deaths_suicide_2009 deaths_suicide_2010
+			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
+               deaths_suicide_2016
 		;
 
 id &geo; 
