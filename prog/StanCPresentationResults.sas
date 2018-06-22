@@ -34,11 +34,13 @@ data compile_stanc_tabs_&geosuf;
 		ACS.acs_&_years._dc_sum_tr_&geosuf
 			(keep= &geo
 			    totpop_&_years.
-                pop35_64yearsM pop35_64yearsF pop18_34yearsF pop18_34yearsM 
-				pop65andoveryearsF pop65andoveryearsM popunder18yearsF popunder18yearsM 
-				popunder5yearsM popunder5yearsF
-                agghshldincome poppoorpersons personspovertydefined mpopworkfth 
-				popworkftlt75k popworkftlt35k 
+                pop35_64yearsM_&_years. pop35_64yearsF_&_years. pop18_34yearsF_&_years. pop18_34yearsM_&_years. 
+				pop65andoveryearsF_&_years. pop65andoveryearsM_&_years. popunder18yearsF_&_years. popunder18yearsM_&_years. 
+
+				/*popunder5yearsM_&_years. popunder5yearsF_&_years.*/
+
+                agghshldincome_&_years. poppoorpersons_&_years. personspovertydefined_&_years. mpopworkfth_&_years. 
+				popworkftlt75k_&_years. popworkftlt35k_&_years. 
 				popincivlaborforce_&_years.
 				pop16andoveryears_&_years. popcivilianemployed_&_years. popunemployed_&_years. 
 				poppoorpersons_&_years. personspovertydefined_&_years. popwithrace_&_years. 
@@ -75,23 +77,9 @@ data compile_stanc_tabs_&geosuf;
 
                 FamMarriedCouple_&_years. FamMaleholder_&_years. FamFemaleholder_&_years. Nonfamlivingalone_&_years.
                 Nonfamnotlivingalone_&_years.
-				)
 
-		Acs.Acs_&_years._dc_sum_bg_&geosuf
-			(keep= &geo 
-				popwhitenonhispbridge_&_years. popblacknonhispbridge_&_years. pophisp_&_years. 
-				popasianpinonhispbridge_&_years. popotherracenonhispbridg_&_years. 
 				pop25andoveryears_&_years. pop25andoverwhs_&_years. Pop25andOverWoutHS_&_years. pop25andoverwcollege_&_years. 
-				PopEmployedByInd_&_years. PopEmployedAgric_&_years. PopEmployedConstr_&_years. 
-				PopEmployedManuf_&_years. PopEmployedWhlsale_&_years. PopEmployedRetail_&_years. 
-				PopEmployedTransprt_&_years. PopEmployedInfo_&_years. PopEmployedFinance_&_years. 
-				PopEmployedProfServ_&_years. PopEmployedEduction_&_years. PopEmployedArts_&_years. 
-				PopEmployedOther_&_years. PopEmployedPubAdmin_&_years.
-				PopEmployedByOcc_&_years. PopEmployedMngmt_&_years.
-				PopEmployedServ_&_years. PopEmployedSales_&_years.
-				PopEmployedNatRes_&_years. PopEmployedProd_&_years. 
-				PopEmployedWorkers_&_years. PopEmployedWorkInState_&_years. PopEmployedWorkOutState_&_years.
-				NumRenterOccupiedHU_&_years. NumOwnerOccupiedHU_&_years. NumOccupiedHsgUnits_&_years.
+
 				GrossRentLT100_&_years. GrossRent100_149_&_years. GrossRent150_199_&_years.  
 				GrossRent200_249_&_years. GrossRent250_299_&_years. 
 				GrossRent300_349_&_years. GrossRent350_349_&_years. 
@@ -104,6 +92,7 @@ data compile_stanc_tabs_&geosuf;
 				GrossRent1500_1999_&_years. GrossRent2000_2499_&_years.
 				GrossRent2500_2999_&_years. GrossRent3000_3499_&_years.
 				GrossRentGT3500_&_years. GrossRentNoCash_&_years.
+
 				IncmByRenterCst_LT10K_&_years. IncmByRenterCst_10_19K_&_years.
 				IncmByRenterCst_20_34K_&_years. IncmByRenterCst_35_49K_&_years.
 				IncmByRenterCst_50_74K_&_years. IncmByRenterCst_75_99K_&_years.
@@ -123,6 +112,26 @@ data compile_stanc_tabs_&geosuf;
 				NumRentCstBurden_20_34K_&_years. NumRentCstBurden_35_49K_&_years. 
 				NumRentCstBurden_50_74K_&_years. NumRentCstBurden_75_99K_&_years. 
 				NumRentCstBurden_GT100K_&_years.
+
+				NumRenterOccupiedHU_&_years. NumOwnerOccupiedHU_&_years. NumOccupiedHsgUnits_&_years.
+				)
+
+		Acs.Acs_&_years._dc_sum_bg_&geosuf
+			(keep= &geo 
+				popwhitenonhispbridge_&_years. popblacknonhispbridge_&_years. pophisp_&_years. 
+				popasianpinonhispbridge_&_years. popotherracenonhispbridg_&_years. 
+				
+				PopEmployedByInd_&_years. PopEmployedAgric_&_years. PopEmployedConstr_&_years. 
+				PopEmployedManuf_&_years. PopEmployedWhlsale_&_years. PopEmployedRetail_&_years. 
+				PopEmployedTransprt_&_years. PopEmployedInfo_&_years. PopEmployedFinance_&_years. 
+				PopEmployedProfServ_&_years. PopEmployedEduction_&_years. PopEmployedArts_&_years. 
+				PopEmployedOther_&_years. PopEmployedPubAdmin_&_years.
+				PopEmployedByOcc_&_years. PopEmployedMngmt_&_years.
+				PopEmployedServ_&_years. PopEmployedSales_&_years.
+				PopEmployedNatRes_&_years. PopEmployedProd_&_years. 
+				PopEmployedWorkers_&_years. PopEmployedWorkInState_&_years. PopEmployedWorkOutState_&_years.
+				
+			
 					)
 
 					
@@ -277,6 +286,8 @@ data compile_stanc_tabs_&geosuf;
 			   )
 ;
 by &geo.;
+format deaths_: suppr5f.;
+format births_: suppr5f.;
 run;
 
 data calc_stanc_tabs_&geosuf;
@@ -446,7 +457,7 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 			GrossRentGT3500_&_years. 
 
 
-		ACS Household by Income
+		/*ACS Household by Income*/
 				hshldincunder15000_&_years. hshldinc15000to34999_&_years.
 				hshldinc35000to49999_&_years. hshldinc50000to74999_&_years.
                 hshldinc75000to99999_&_years. hshldinc100000to124999_&_years.
@@ -640,7 +651,7 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 			   /*deaths_suicide_2000 deaths_suicide_2001 deaths_suicide_2002 deaths_suicide_2003 deaths_suicide_2004 deaths_suicide_2005 
                deaths_suicide_2006 deaths_suicide_2007 deaths_suicide_2008*/ deaths_suicide_2009 deaths_suicide_2010
 			   deaths_suicide_2011 deaths_suicide_2012 deaths_suicide_2013 deaths_suicide_2014 deaths_suicide_2015
-               deaths_suicide_2016
+               deaths_suicide_2016 
 		;
 
 id &geo; 
@@ -649,7 +660,7 @@ run;
 %File_info( data=compile_stanc_tabs_&geosuf, contents=n, printobs=0 )
 
 proc export data=stanc_tabs_&geosuf
-	outfile="L:\Libraries\StanC\Doc\Stanctabs_&geosuf..csv"
+	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_&geosuf..csv"
 	dbms=csv replace;
 	run;
 
