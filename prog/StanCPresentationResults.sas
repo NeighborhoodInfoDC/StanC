@@ -298,8 +298,8 @@ data calc_stanc_tabs_&geosuf;
                Pop35_64Years_&_years. = Pop35_64YearsM_&_years. + Pop35_64YearsF_&_years.;
                Pop65andOverYears_&_years. = Pop65andOverYearsM_&_years. + Pop65andOverYearsF_&_years.;
 
-			   PopFemale_&_years. = PopUnder18YearsF_&_years.+ Pop18_34YearsF_&_years. + Pop18_34YearsF_&_years. + Pop65andOverYearsF_&_years.;
-               PopMale_&_years. = PopUnder18YearsM_&_years.+ Pop18_34YearsM_&_years. + Pop18_34YearsM_&_years. + Pop65andOverYearsM_&_years.;
+			   PopFemale_&_years. = PopUnder18YearsF_&_years.+ Pop18_34YearsF_&_years. + Pop35_64YearsF_&_years. + Pop65andOverYearsF_&_years.;
+               PopMale_&_years. = PopUnder18YearsM_&_years.+ Pop18_34YearsM_&_years. + Pop35_64YearsM_&_years. + Pop65andOverYearsM_&_years.;
 
 		/*Labor force, employment, and poverty*/
 			PctLaborForce_&_years. = popincivlaborforce_&_years. / pop16andoveryears_&_years.;
