@@ -21,22 +21,22 @@ libname ys "S:\YS";
 
 %macro Compile_stanc_data (geo, geosuf);
 
-data compile_stanc_tabs_&geosuf;
+data compile_stanc_tabs_&geosuf._olddata;
 	merge    
-			ys.Births_sum_&geosuf_olddata
+			ys.Births_sum_&geosuf._olddata
             (keep=&geo
                births_total_2000 births_total_2001 births_total_2002 
 
                births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002 
 
-               births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002 births_prenat_1st_2003 
+               births_prenat_1st_2000 births_prenat_1st_2001 births_prenat_1st_2002
 
 			   births_low_wt_2000 births_low_wt_2001 births_low_wt_2002 
 
 			   births_preterm_2000 births_preterm_2001 births_preterm_2002
 			   )
 
-             ys.Deaths_sum_&geosuf_olddata
+             ys.Deaths_sum_&geosuf._olddata
             (keep=&geo
                deaths_total_2000 deaths_total_2001 deaths_total_2002 deaths_total_2003 deaths_total_2004
 			   deaths_total_2005 deaths_total_2006 deaths_total_2007 
@@ -89,11 +89,11 @@ format deaths_: suppr5f.;
 format births_: suppr5f.;
 run;
 
-data calc_stanc_tabs_&geosuf_olddata;
-	set compile_stanc_tabs_&geosuf_olddata;
+data calc_stanc_tabs_&geosuf._olddata;
+	set compile_stanc_tabs_&geosuf._olddata;
 run;
 
-proc transpose data=calc_stanc_tabs_&geosuf_olddata out=stanc_tabs_&geosuf_olddata(label="Stanton Commons Tabulations, &geo");
+proc transpose data=calc_stanc_tabs_&geosuf._olddata out=stanc_tabs_&geosuf._olddata(label="Stanton Commons Tabulations, &geo");
 	var 	&geo 	
 
 
@@ -157,9 +157,9 @@ proc transpose data=calc_stanc_tabs_&geosuf_olddata out=stanc_tabs_&geosuf_oldda
 id &geo; 
 run; 
 
-%File_info( data=compile_stanc_tabs_&geosuf, contents=n, printobs=0 )
+%File_info( data=stanc_tabs_&geosuf._olddata, contents=n, printobs=0 )
 
-proc export data=stanc_tabs_&geosuf_olddata
+proc export data=stanc_tabs_&geosuf._olddata
 	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_earlyyears_&geosuf..csv"
 	dbms=csv replace;
 	run;
