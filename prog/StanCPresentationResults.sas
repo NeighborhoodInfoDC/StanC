@@ -79,6 +79,7 @@ data compile_stanc_tabs_&geosuf;
                 Nonfamnotlivingalone_&_years.
 
 				pop25andoveryears_&_years. pop25andoverwhs_&_years. Pop25andOverWoutHS_&_years. pop25andoverwcollege_&_years. 
+				pop25andoverwsc_&_years.
 
 				GrossRentLT100_&_years. GrossRent100_149_&_years. GrossRent150_199_&_years.  
 				GrossRent200_249_&_years. GrossRent250_299_&_years. 
@@ -350,10 +351,11 @@ data calc_stanc_tabs_&geosuf;
 			PctOwnCstBurden_GT150K_&_years. = NumOwnCstBurden_GT150K_&_years. / IncmByOwnerCst_GT150K_&_years.;
 
 		/*Education*/
-			PctHS_&_years. = pop25andoverwhs_&_years. / pop25andoveryears_&_years.;
-			PctCol_&_years. = pop25andoverwcollege_&_years. / pop25andoveryears_&_years.;
 			PctWoutHS_&_years. = Pop25andOverWoutHS_&_years. / pop25andoveryears_&_years.;
-
+			PctHS_&_years. = (pop25andoverwhs_&_years.- pop25andoverwsc_&_years.)/ pop25andoveryears_&_years.;
+			PctsomeCol_&_years. = pop25andoverwsc_&_years. / pop25andoveryears_&_years.;
+			PctCol_&_years. = pop25andoverwcollege_&_years. / pop25andoveryears_&_years.;
+			
 		/*Race and ethnicity*/
 			PctWht_&_years. = popwhitenonhispbridge_&_years. / popwithrace_&_years.;
 			PctBlk_&_years. = popblacknonhispbridge_&_years. / popwithrace_&_years.;
@@ -473,9 +475,10 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 
 		/*ACS Education*/
 			Pop25andoveryears_&_years.
-			PctHS_&_years. 
-			PctCol_&_years. 
 			PctWoutHS_&_years.
+            PctHS_&_years.
+            PctsomeCol_&_years.
+			PctCol_&_years. 
 
 		/*ACS Labor force and employment*/
 			PctLaborForce_&_years.
