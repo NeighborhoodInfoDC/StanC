@@ -36,7 +36,7 @@ data compile_stanc_tabs_&geosuf;
 			    totpop_&_years.
                 pop35_64yearsM_&_years. pop35_64yearsF_&_years. pop18_34yearsF_&_years. pop18_34yearsM_&_years. 
 				pop65andoveryearsF_&_years. pop65andoveryearsM_&_years. popunder18yearsF_&_years. popunder18yearsM_&_years. 
-
+                popunder5years_&_years.
 				/*popunder5yearsM_&_years. popunder5yearsF_&_years.*/
 
                 agghshldincome_&_years. poppoorpersons_&_years. personspovertydefined_&_years. mpopworkfth_&_years. 
@@ -294,6 +294,7 @@ data calc_stanc_tabs_&geosuf;
 	set compile_stanc_tabs_&geosuf;
         /*Population by Age and Sex*/
                PopUnder18Years_&_years. = PopUnder18YearsM_&_years. + PopUnder18YearsF_&_years.;
+			   Pop5_17years_&_years. = PopUnder18Years_&_years. - popunder5years_&_years.;
                Pop18_34Years_&_years. = Pop18_34YearsM_&_years.+ Pop18_34YearsF_&_years.;
                Pop35_64Years_&_years. = Pop35_64YearsM_&_years. + Pop35_64YearsF_&_years.;
                Pop65andOverYears_&_years. = Pop65andOverYearsM_&_years. + Pop65andOverYearsF_&_years.;
@@ -406,7 +407,8 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
 
 		/*ACS Population 2012-2016*/
 			totpop_&_years.
-            PopUnder18Years_&_years.
+			popunder5years_&_years.
+            Pop5_17years_&_years.
             Pop18_34Years_&_years.
 			Pop35_64Years_&_years.
 			Pop65andOverYears_&_years.
@@ -660,7 +662,7 @@ run;
 %File_info( data=compile_stanc_tabs_&geosuf, contents=n, printobs=0 )
 
 proc export data=stanc_tabs_&geosuf
-	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_&geosuf..csv"
+	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_711_&geosuf..csv"
 	dbms=csv replace;
 	run;
 
