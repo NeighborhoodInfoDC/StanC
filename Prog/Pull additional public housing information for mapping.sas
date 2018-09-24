@@ -46,3 +46,7 @@ merge stancprojects subsidy;
 by nlihc_id;
 if Geo2010 ne "" then output;
 run; 
+proc export data=subsidycat
+outfile="&_dcdata_default_path.\StanC\Prog\subsidized_housing_stanc.csv"
+dbms=csv replace;
+run;
