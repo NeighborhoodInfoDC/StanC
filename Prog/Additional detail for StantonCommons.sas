@@ -28,18 +28,18 @@ data compile_stanc_tabs_&geosuf;
 	merge 
 		ACS.acs_&_years._dc_sum_tr_&geosuf
 			(keep= &geo
-			      NumMarriedFamRelatedChildrenunder6only_&_years. 
-			      NumMarriedFamRelatedChildrenunder6_17_&_years. 
-				  NumMarriedFamRelatedChildrenunder17plusonly_&_years. 
-				  NumMarriedFamnoRelatedChildren_&_years. 
-			      NumFamRelatedChildrenunder6only_mh_&_years. 
-			      NumFamRelatedChildrenunder6_17_mh_&_years. 
-				  NumFamRelatedChildrenunder17plusonly_mh_&_years. 
-				  NumFamnoRelatedChildren_mh_&_years. 
-			      NumFamRelatedChildrenunder6only_fh_&_years. 
-			      NumFamRelatedChildrenunder6_17_fh_&_years. 
-				  NumFamRelatedChildrenunder17plusonly_fh_&_years. 
-				  NumFamnoRelatedChildren_fh_&_years.
+			      numfamfhnrkids_&_years. 
+			      numfamfhrkids6_17_&_years. 
+				  numfamfhrkidsu6u17_&_years. 
+				  numfamfhrkidsu6_&_years. 
+			      numfammhnrkids_&_years. 
+			      numfammhrkids6_17_&_years. 
+				  numfammhrkidsu6u17_&_years. 
+				  numfammhrkidsu6_&_years. 
+			      nummarfamnrkids_&_years. 
+			      nummarfamrkids6_17_&_years. 
+				  nummarfamrkidsu6u17_&_years. 
+				  nummarfamrkidsu6_&_years.
 				)
 
 			Vital.Births_sum_&geosuf
