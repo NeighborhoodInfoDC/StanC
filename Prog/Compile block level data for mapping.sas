@@ -17,13 +17,16 @@
 ** Define libraries **;
 %DCData_lib( Vital )
 %DCData_lib( Census )
+%DCData_lib( ACS )
+
+%let _years=2012_16;
 
 /*calculate birth by block group*/
 
 data births;
 set vital.births_2016;
 keep geobg2010 bgid births_total births_prenat_adeq births_prenat_inad births_low_wt births_preterm;
-bgid = geobg2010+0;
+
 run;
 
 proc sort data = births; by geobg2010; run;
@@ -65,10 +68,6 @@ var agegroup_1 agegroup_2 agegroup_3 agegroup_4;
 output	out=pop_bg2010	sum= ;
 run;
 
-data pop;
-merge births_bg2010 pop_bg2010;
-by geobg2010;
-run;
 /*
 data pop;
 set pop;
@@ -87,15 +86,15 @@ run;
 data births_tract;
 set vital.births_2016;
 keep geo2010 tractid births_total births_prenat_adeq births_prenat_inad births_low_wt births_preterm;
-tractid = geo2010+0;
+
 run;
 
 proc sort data = births_tract; by geo2010; run;
 
 proc summary data=births_tract;
 by geo2010;
-var births_total births_prenat_adeq births_prenat_inad births_low_wt births_preterm tractid;
-output	out=births_tract	sum= ;
+var births_total births_prenat_adeq births_prenat_inad births_low_wt births_preterm ;
+output	out=births_tract sum= ;
 run;
 
 proc sort data = births_tract;
@@ -126,17 +125,26 @@ run;
 proc summary data=population_tract;
 by geo2010;
 var agegroup_1 agegroup_2 agegroup_3 agegroup_4;
-output	out=pop_tract2010	sum= ;
+output	out=pop_tract2010_2	sum= ;
 run;
 
+
+data childpoverty;
+set Acs.Acs_2012_16_dc_sum_tr_tr10;
+keep geo2010 childrenpovertydefined_&_years. poppoorchildren_&_years.;
+run;
+
+
 data pop_tract;
-merge births_tract pop_tract2010;
+merge births_tract pop_tract2010_2 childpoverty;
 by geo2010;
 run;
 
 data pop_tract;
 set pop_tract;
 if geo2010 in ("11001007406","11001007407", "11001007408", "11001007502", "11001007504") then stanc = "1";
+tractid = geo2010;
+format tractid $char11.;
 run;
 
 
