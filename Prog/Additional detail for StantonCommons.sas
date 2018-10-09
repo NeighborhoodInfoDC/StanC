@@ -44,9 +44,8 @@ data compile_stanc_tabs_&geosuf;
 
 			Vital.Births_sum_&geosuf
             (keep=&geo
-
            /*detail on characteristics of mothers by level of prenatal care received*/
-			births_prenat_adeq_2016  births_prenat_adeq_15to19_2016 births_prenat_adeq_20to24_2016 births_prenat_adeq_25to29_2016 
+			births_prenat_adeq_2016  births_prenat_adeq_0to14 births_prenat_adeq_15to19_2016 births_prenat_adeq_20to24_2016 births_prenat_adeq_25to29_2016 
 			births_prenat_adeq_30to34_2016 births_prenat_adeq_35to39_2015 births_prenat_adeq_40to44_2016 births_prenat_adeq_45plus_2016
 			births_prenat_adeq_asn_2016 births_prenat_adeq_blk_2016 births_prenat_adeq_hsp_2016 births_prenat_adeq_oth_2016 
 			births_prenat_adeq_wht_2016
@@ -92,7 +91,7 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
 				  nummarfamrkidsu6_&_years.
 
   /*Vital Births and Deaths*/
-             births_prenat_adeq_2016  births_prenat_adeq_15to19_2016 births_prenat_adeq_20to24_2016 births_prenat_adeq_25to29_2016 
+            births_prenat_adeq_2016  births_prenat_adeq_0to14 births_prenat_adeq_15to19_2016 births_prenat_adeq_20to24_2016 births_prenat_adeq_25to29_2016 
 			births_prenat_adeq_30to34_2016 births_prenat_adeq_35to39_2015 births_prenat_adeq_40to44_2016 births_prenat_adeq_45plus_2016
 			births_prenat_adeq_asn_2016 births_prenat_adeq_blk_2016 births_prenat_adeq_hsp_2016 births_prenat_adeq_oth_2016 
 			births_prenat_adeq_wht_2016
