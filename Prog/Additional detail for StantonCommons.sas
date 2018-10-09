@@ -69,14 +69,14 @@ data compile_stanc_tabs_&geosuf;
 
 
 
-			tanf.Tanf_sum_&geosuf
+			tanf.fs_sum_&geosuf
 
 ( keep = &geo
 
-tanf_w_race_2016 tanf_asian_2016 tanf_black_2016 tanf_hisp_2016 tanf_white_2016 tanf_oth_rac_2016 
-tanf_0to1_2016 tanf_2to5_2016 tanf_6to12_2016 tanf_13to17_2016 tanf_18to24_2016 tanf_adult_2016 tanf_child_2016
-tanf_case_2016 tanf_case_fch_2016 tanf_case_fcp_2016 tanf_case_fot_2016 tanf_case_fsf_2016 tanf_case_fsm_2016 
-tanf_child_fcp_2016 tanf_child_fot_2016 tanf_child_fsf_2016 tanf_child_fsm_2016 
+fs_w_race_2016 fs_asian_2016 fs_black_2016 fs_hisp_2016 fs_white_2016 fs_oth_rac_2016 
+fs_0to1_2016 fs_2to5_2016 fs_6to12_2016 fs_13to17_2016 fs_18to24_2016 fs_adult_2016 fs_child_2016
+fs_case_2016 fs_case_fch_2016 fs_case_fcp_2016 fs_case_fot_2016 fs_case_fsf_2016 fs_case_fsm_2016 
+fs_child_fcp_2016 fs_child_fot_2016 fs_child_fsf_2016 fs_child_fsm_2016 
 
 
 )
@@ -126,10 +126,10 @@ proc transpose data=compile_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Sta
             births_w_prenat_blk_2016 births_w_prenat_hsp_2016 births_w_prenat_oth_2016 births_w_prenat_wht_2016
 
 
-			tanf_w_race_2016 tanf_asian_2016 tanf_black_2016 tanf_hisp_2016 tanf_white_2016 tanf_oth_rac_2016 
-			tanf_0to1_2016 tanf_2to5_2016 tanf_6to12_2016 tanf_13to17_2016 tanf_18to24_2016 tanf_adult_2016 tanf_child_2016
-			tanf_case_2016 tanf_case_fch_2016 tanf_case_fcp_2016 tanf_case_fot_2016 tanf_case_fsf_2016 tanf_case_fsm_2016 
-			tanf_child_fcp_2016 tanf_child_fot_2016 tanf_child_fsf_2016 tanf_child_fsm_2016 
+			fs_w_race_2016 fs_asian_2016 fs_black_2016 fs_hisp_2016 fs_white_2016 fs_oth_rac_2016 
+			fs_0to1_2016 fs_2to5_2016 fs_6to12_2016 fs_13to17_2016 fs_18to24_2016 fs_adult_2016 fs_child_2016
+			fs_case_2016 fs_case_fch_2016 fs_case_fcp_2016 fs_case_fot_2016 fs_case_fsf_2016 fs_case_fsm_2016 
+			fs_child_fcp_2016 fs_child_fot_2016 fs_child_fsf_2016 fs_child_fsm_2016 
 
 
 
