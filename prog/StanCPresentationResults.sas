@@ -182,6 +182,17 @@ data compile_stanc_tabs_&geosuf;
                births_total_2010 births_total_2011 births_total_2012 births_total_2013 births_total_2014
 			   births_total_2015 births_total_2016
 
+			    /*biths with prenatal care status reported*/
+			   births_w_prenat_2003 births_w_prenat_2004 births_w_prenat_2005 births_w_prenat_2006 births_w_prenat_2007
+			   births_w_prenat_2008 births_w_prenat_2009 births_w_prenat_2010 births_w_prenat_2011 births_w_prenat_2012
+			   births_w_prenat_2013 births_w_prenat_2014 births_w_prenat_2015 births_w_prenat_2016
+
+			   /*births with inadequate prenatal care*/
+			   births_prenat_inad_2003 births_prenat_inad_2004 births_prenat_inad_2005 births_prenat_inad_2006
+			   births_prenat_inad_2007 births_prenat_inad_2008 births_prenat_inad_2009 births_prenat_inad_2010
+			   births_prenat_inad_2011 births_prenat_inad_2012 births_prenat_inad_2013 births_prenat_inad_2014
+			   births_prenat_inad_2015 births_prenat_inad_2016
+
                /*births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002*/ births_prenat_adeq_2003 births_prenat_adeq_2004
 			   births_prenat_adeq_2005 births_prenat_adeq_2006 births_prenat_adeq_2007 births_prenat_adeq_2008 births_prenat_adeq_2009
                births_prenat_adeq_2010 births_prenat_adeq_2011 births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
@@ -541,6 +552,17 @@ proc transpose data=calc_stanc_tabs_&geosuf out=stanc_tabs_&geosuf(label="Stanto
                births_total_2010 births_total_2011 births_total_2012 births_total_2013 births_total_2014
 			   births_total_2015 births_total_2016
 
+			   /*biths with prenatal care status reported*/
+			   births_w_prenat_2003 births_w_prenat_2004 births_w_prenat_2005 births_w_prenat_2006 births_w_prenat_2007
+			   births_w_prenat_2008 births_w_prenat_2009 births_w_prenat_2010 births_w_prenat_2011 births_w_prenat_2012
+			   births_w_prenat_2013 births_w_prenat_2014 births_w_prenat_2015 births_w_prenat_2016
+
+			   /*births with inadequate prenatal care*/
+			   births_prenat_inad_2003 births_prenat_inad_2004 births_prenat_inad_2005 births_prenat_inad_2006
+			   births_prenat_inad_2007 births_prenat_inad_2008 births_prenat_inad_2009 births_prenat_inad_2010
+			   births_prenat_inad_2011 births_prenat_inad_2012 births_prenat_inad_2013 births_prenat_inad_2014
+			   births_prenat_inad_2015 births_prenat_inad_2016
+
                /*births_prenat_adeq_2000 births_prenat_adeq_2001 births_prenat_adeq_2002*/ births_prenat_adeq_2003 births_prenat_adeq_2004
 			   births_prenat_adeq_2005 births_prenat_adeq_2006 births_prenat_adeq_2007 births_prenat_adeq_2008 births_prenat_adeq_2009
                births_prenat_adeq_2010 births_prenat_adeq_2011 births_prenat_adeq_2012 births_prenat_adeq_2013 births_prenat_adeq_2014
@@ -660,7 +682,7 @@ run;
 %File_info( data=compile_stanc_tabs_&geosuf, contents=n, printobs=0 )
 
 proc export data=stanc_tabs_&geosuf
-	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_&geosuf..csv"
+	outfile="L:\Libraries\StanC\Doc\Stanctabs_format_&geosuf._morebirth.csv"
 	dbms=csv replace;
 	run;
 
