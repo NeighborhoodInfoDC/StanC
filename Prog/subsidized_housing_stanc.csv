@@ -1,0 +1,67 @@
+Nlihc_id,Status,Proj_Name,Proj_Units_Tot,Proj_Units_Assist_Max,Geo2010,Proj_addre,Proj_x,Proj_y,Units_Assist,Subsidy_Active,Program
+NL000006,Active,1728 W St SE,15,15,DC Tract 75.04,1728 W Street SE,401769.82,132788.41,,Yes,McKinney Vento Act loan
+NL000006,Active,1728 W St SE,15,15,DC Tract 75.04,1728 W Street SE,401769.82,132788.41,15,Yes,Low income housing tax credit 9%
+NL000060,Active,Carver Hall Apts,94,94,DC Tract 75.04,2338 Pitts Place SE,401285.01,132447.9,95,Yes,Sec 8 substantial rehabilitation
+NL000060,Active,Carver Hall Apts,94,94,DC Tract 75.04,2338 Pitts Place SE,401285.01,132447.9,95,Yes,Sec 223(a)(7)/221(d)(4) MKT Refi/Moderate Income
+NL000097,Active,Elvans Road,20,20,DC Tract 74.06,2440 Elvans Road SE; 2442 Elvans Road SE; 2444 Elvans Road SE; others,401035.821,131770.298,20,Yes,Public housing
+NL000126,Active,Galen Terrace,84,84,DC Tract 75.04,1641 W Street SE; 1645 W Street SE; 1649 W Street SE,401629.89,132789.6,83,Yes,Low income housing tax credit 4%
+NL000126,Active,Galen Terrace,84,84,DC Tract 75.04,1641 W Street SE; 1645 W Street SE; 1649 W Street SE,401629.89,132789.6,84,Yes,Sec 8 property disposition moderate rehabilitation
+NL000126,Active,Galen Terrace,84,84,DC Tract 75.04,1641 W Street SE; 1645 W Street SE; 1649 W Street SE,401629.89,132789.6,84,Yes,Tax exempt bond
+NL000126,Active,Galen Terrace,84,84,DC Tract 75.04,1641 W Street SE; 1645 W Street SE; 1649 W Street SE,401629.89,132789.6,84,Yes,Community development block grant
+NL000127,Active,Garfield Hills Apts (Garfield Park),94,94,DC Tract 74.08,2301 Hartford Street SE; 2301 Irving Street SE; 2303 Hartford Street SE; others,402419.9728,131755.6088,94,Yes,Tax exempt bond
+NL000127,Active,Garfield Hills Apts (Garfield Park),94,94,DC Tract 74.08,2301 Hartford Street SE; 2301 Irving Street SE; 2303 Hartford Street SE; others,402419.9728,131755.6088,93,Yes,Sec 8 housing finance agency substantial rehabilitation
+NL000127,Active,Garfield Hills Apts (Garfield Park),94,94,DC Tract 74.08,2301 Hartford Street SE; 2301 Irving Street SE; 2303 Hartford Street SE; others,402419.9728,131755.6088,94,Yes,Sec 542(b) QPE Risk Sharing-Existing
+NL000127,Active,Garfield Hills Apts (Garfield Park),94,94,DC Tract 74.08,2301 Hartford Street SE; 2301 Irving Street SE; 2303 Hartford Street SE; others,402419.9728,131755.6088,94,Yes,Low income housing tax credit 4%
+NL000128,Active,Maplewood Court,94,94,DC Tract 74.08,2300 Hartford Street SE; 2302 Hartford Street SE; 2304 Hartford Street SE; others,402385.13857,131899.66286,94,Yes,Low income housing tax credit 4%
+NL000139,Active,Good Hope House,8,8,DC Tract 75.04,1715 V Street SE,401796.06,132892.59,8,Yes,HOME
+NL000140,Active,Graceview Apts,38,38,DC Tract 75.04,2310 16th Street SE,401518.41,132697.89,38,Yes,Community development block grant
+NL000163,Active,Howard Hill Apts,43,43,DC Tract 74.07,1341 Howard Road SE; 1345 Howard Road SE; 1349 Howard Road SE; others,400721.6325,132458.8725,45,Yes,HOME
+NL000163,Active,Howard Hill Apts,43,43,DC Tract 74.07,1341 Howard Road SE; 1345 Howard Road SE; 1349 Howard Road SE; others,400721.6325,132458.8725,43,Yes,Low income housing tax credit 9%
+NL000163,Active,Howard Hill Apts,43,43,DC Tract 74.07,1341 Howard Road SE; 1345 Howard Road SE; 1349 Howard Road SE; others,400721.6325,132458.8725,43,Yes,DC housing production trust fund
+NL000188,Active,Knox Hill Senior,122,122,DC Tract 75.02,2700 Jasper Street SE,402672.65,131606.43,122,Yes,Public housing
+NL000190,Active,Langston Lane,117,117,DC Tract 74.08,2726 Langston Place SE; 2728 Langston Place SE; 2730 Langston Place SE; others,402471.00333,131929.92222,114,Yes,DC housing production trust fund
+NL000190,Active,Langston Lane,117,117,DC Tract 74.08,2726 Langston Place SE; 2728 Langston Place SE; 2730 Langston Place SE; others,402471.00333,131929.92222,118,Yes,Sec 8 property disposition moderate rehabilitation
+NL000190,Active,Langston Lane,117,117,DC Tract 74.08,2726 Langston Place SE; 2728 Langston Place SE; 2730 Langston Place SE; others,402471.00333,131929.92222,118,Yes,Low income housing tax credit 4+9%
+NL000221,Active,Oxford Manor,227,227,DC Tract 74.07,2607 Bowen Road SE,400720.31,132370.65,30,Yes,Public housing
+NL000221,Active,Oxford Manor,227,227,DC Tract 74.07,2607 Bowen Road SE,400720.31,132370.65,227,Yes,Community development block grant
+NL000221,Active,Oxford Manor,227,227,DC Tract 74.07,2607 Bowen Road SE,400720.31,132370.65,226,Yes,Low income housing tax credit 9%
+NL000221,Active,Oxford Manor,227,227,DC Tract 74.07,2607 Bowen Road SE,400720.31,132370.65,226,No,Sec 221(d)(4) Mkt. Rate Mod Inc/Disp Fams
+NL000221,Active,Oxford Manor,227,227,DC Tract 74.07,2607 Bowen Road SE,400720.31,132370.65,226,Yes,Sec 223(a)(7)/221(d)(4) MKT Refi/Moderate Income
+NL000237,Active,Hanover Court (Hartford Knox St Apts),74,74,DC Tract 74.08,2400 Hartford Street SE; 2402 Hartford Street SE; 2404 Hartford Street SE; others,402460.75,131837.26667,74,Yes,Low income housing tax credit 4%
+NL000237,Active,Hanover Court (Hartford Knox St Apts),74,74,DC Tract 74.08,2400 Hartford Street SE; 2402 Hartford Street SE; 2404 Hartford Street SE; others,402460.75,131837.26667,74,Yes,Tax exempt bond
+NL000237,Active,Hanover Court (Hartford Knox St Apts),74,74,DC Tract 74.08,2400 Hartford Street SE; 2402 Hartford Street SE; 2404 Hartford Street SE; others,402460.75,131837.26667,74,Yes,Community development block grant
+NL000237,Active,Hanover Court (Hartford Knox St Apts),74,74,DC Tract 74.08,2400 Hartford Street SE; 2402 Hartford Street SE; 2404 Hartford Street SE; others,402460.75,131837.26667,74,No,Sec 542(c) HFA Risk Sharing-Existing
+NL000255,Active,Rockburne Estates,224,224,DC Tract 74.08,2600 Jasper Street SE; 2601 Jasper Street SE; 2602 Jasper Street SE; others,402637.21972,131431.82169,224,Yes,Low income housing tax credit 4%
+NL000255,Active,Rockburne Estates,224,224,DC Tract 74.08,2600 Jasper Street SE; 2601 Jasper Street SE; 2602 Jasper Street SE; others,402637.21972,131431.82169,224,Yes,Tax exempt bond
+NL000255,Active,Rockburne Estates,224,224,DC Tract 74.08,2600 Jasper Street SE; 2601 Jasper Street SE; 2602 Jasper Street SE; others,402637.21972,131431.82169,222,No,Sec 221(d)(4) Mkt. Rate Mod Inc/Disp Fams
+NL000257,Active,Freedom House,30,30,DC Tract 75.04,2125 18th Street SE,401803.3,132841.11,30,Yes,DC housing production trust fund
+NL000262,Active,Sayles Place,61,61,DC Tract 74.06,2716 Douglas Place SE,400765.34,132046.93,61,Yes,DC housing production trust fund
+NL000262,Active,Sayles Place,61,61,DC Tract 74.06,2716 Douglas Place SE,400765.34,132046.93,,Yes,McKinney Vento Act loan
+NL000262,Active,Sayles Place,61,61,DC Tract 74.06,2716 Douglas Place SE,400765.34,132046.93,61,Yes,Sec 236(j)(1)/Lower Income Families
+NL000262,Active,Sayles Place,61,61,DC Tract 74.06,2716 Douglas Place SE,400765.34,132046.93,12,Yes,Sec 8 loan management set-aside
+NL000265,Active,Second Family Home,36,36,DC Tract 74.07,2612 Bowen Road SE,400670.85,132399.6,36,Yes,DC housing production trust fund
+NL000280,Active,Forest Ridge & The Vistas (Formerly Stanton-Wellington Apts),399,381,DC Tract 74.06,2549 Elvans Road SE,400756.76,131904.26,80,Yes,Sec 8 substantial rehabilitation
+NL000280,Active,Forest Ridge & The Vistas (Formerly Stanton-Wellington Apts),399,381,DC Tract 74.06,2549 Elvans Road SE,400756.76,131904.26,79,Yes,Sec 8 loan management set-aside
+NL000280,Active,Forest Ridge & The Vistas (Formerly Stanton-Wellington Apts),399,381,DC Tract 74.06,2549 Elvans Road SE,400756.76,131904.26,100,Yes,Sec 8 loan management set-aside
+NL000280,Active,Forest Ridge & The Vistas (Formerly Stanton-Wellington Apts),399,381,DC Tract 74.06,2549 Elvans Road SE,400756.76,131904.26,122,Yes,Sec 8 loan management set-aside
+NL000285,Active,Suitland East Apts,91,91,DC Tract 75.02,3103 Naylor Road SE,403122.81,131665.21,91,Yes,Low income housing tax credit: unknown pct
+NL000316,Active,W Street Apts,18,18,DC Tract 75.04,1737 W Street SE,401743.59,132739.73,18,Yes,Sec 8 loan management set-aside
+NL000316,Active,W Street Apts,18,18,DC Tract 75.04,1737 W Street SE,401743.59,132739.73,18,Yes,Low income housing tax credit 4%
+NL000333,Active,Woodland Terrace,234,234,DC Tract 75.02,2313 Ainger Place SE,402344.76,132186.62,234,Yes,Public housing
+NL000335,Active,Woodmont Crossing (Homes at Woodmont),176,176,DC Tract 75.02,2301 Good Hope Court SE; 2303 Good Hope Court SE; 2305 Good Hope Court SE; others,402337.99667,132656.31667,176,Yes,Low income housing tax credit 4%
+NL000335,Active,Woodmont Crossing (Homes at Woodmont),176,176,DC Tract 75.02,2301 Good Hope Court SE; 2303 Good Hope Court SE; 2305 Good Hope Court SE; others,402337.99667,132656.31667,176,Yes,Tax exempt bond
+NL000335,Active,Woodmont Crossing (Homes at Woodmont),176,176,DC Tract 75.02,2301 Good Hope Court SE; 2303 Good Hope Court SE; 2305 Good Hope Court SE; others,402337.99667,132656.31667,176,Yes,Community development block grant
+NL000335,Active,Woodmont Crossing (Homes at Woodmont),176,176,DC Tract 75.02,2301 Good Hope Court SE; 2303 Good Hope Court SE; 2305 Good Hope Court SE; others,402337.99667,132656.31667,176,No,Sec 542(b) QPE Risk Sharing-Recent Comp
+NL000357,Active,Good Hope Senior Housing,46,46,DC Tract 75.04,1667 Good Hope Road SE,401754.35,133079.67,45,Yes,DC housing production trust fund
+NL000357,Active,Good Hope Senior Housing,46,46,DC Tract 75.04,1667 Good Hope Road SE,401754.35,133079.67,48,Yes,Low income housing tax credit 4%
+NL000389,Active,People's Cooperative,,46,DC Tract 74.06,2436 Elvans Road SE,401091.98,131782.65,46,Yes,Public housing
+NL000407,Active,Four Walls Development,,15,DC Tract 75.04,1827 Good Hope Road SE,401841.12,133062.22,15,Yes,Public housing
+NL000415,Active,Washington View Apts,,15,DC Tract 74.06,2629 Douglass Road SE,400911.05,132139.38,15,Yes,Public housing
+NL000997,Active,Stanton Park Apts - Wagner,26,26,DC Tract 75.02,2422 Wagner Street SE; 2436 Wagner Street SE; 2440 Wagner Street SE; others,402522.77,132436.405,26,Yes,Low income housing tax credit 9%
+NL000998,Active,Stanton Park Apts - Gainesville,36,36,DC Tract 74.07,1811 Gainesville Street SE; 1817 Gainesville Street SE; 2606 18th Street SE,401861.75,131895.80333,36,Yes,Low income housing tax credit 9%
+NL001010,Active,Forest Cove Apartments,49,49,DC Tract 74.08,3229 Buena Vista Terrace SE,402929.53,131382.7,49,No,Sec 207/223(f) Pur/Refin Hsg.
+NL001010,Active,Forest Cove Apartments,49,49,DC Tract 74.08,3229 Buena Vista Terrace SE,402929.53,131382.7,49,Yes,Sec 223(a)(7)/207/223(f) Refinanced Insurance
+NL001035,Active,WDC I - C,54,54,DC Tract 75.04,1635 V Street SE; 1655 W Street SE; 1659 W Street SE,401654.95333,132831.12,54,Yes,Low income housing tax credit: unknown pct
+NL001047,Active,Sheridan Station,100,100,DC Tract 74.07,2504 Bowen Road SE; 2516 Sheridan Road SE; 2530 Sheridan Road SE; others,400587.87,132411.646,98,Yes,Low income housing tax credit: unknown pct
+NL001047,Active,Sheridan Station,100,100,DC Tract 74.07,2504 Bowen Road SE; 2516 Sheridan Road SE; 2530 Sheridan Road SE; others,400587.87,132411.646,114,Yes,Low income housing tax credit 4%
+NL001059,Active,Roundtree Residences,91,72,DC Tract 75.02,2515 Alabama Avenue SE,402684.67,132175.4,72,Yes,Low income housing tax credit 4%
